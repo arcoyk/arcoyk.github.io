@@ -1,0 +1,36 @@
+font {
+	line-height: 1.7em;
+	font-family: "serif, helveticaNeue";
+	font-size: 0.83em;
+}
+
+.big-font {
+	font-size: 1.85em;
+}
+
+.medium-font {
+	font-size: 1.4em;
+}
+
+.main {
+	width: 600px;
+	margin: 100 auto;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.float {
+	margin-top: 20px;
+	width: 290px;
+	float: left;
+}
+
+.casm {
+	width: 20px;
+}
+
+.float-box{
+	height: 27em;	
+}
