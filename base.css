@@ -32,5 +32,9 @@ font {
 }
 
 .float-box{
-	height: 27em;	
+	height: 29em;	
+}
+
+.helvetica {
+	font-family: "helvetica";
 }
