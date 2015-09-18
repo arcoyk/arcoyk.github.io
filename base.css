@@ -31,8 +31,12 @@ font {
 	width: 20px;
 }
 
-.float-box{
-	height: 29em;	
+.float-box-large {
+	height: 28em;	
+}
+
+.float-box-small {
+	height: 18em;
 }
 
 .helvetica {
