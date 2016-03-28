@@ -23,6 +23,10 @@ font {
 	margin: 100 auto;
 }
 
+.gray {
+  color: #aaa;
+}
+
 .text-right {
 	text-align: right;
 }
@@ -38,7 +42,7 @@ font {
 }
 
 .float-box-large {
-	height: 35em;	
+	height: 35em;
 }
 
 .float-box-small {
@@ -48,3 +52,4 @@ font {
 .helvetica {
 	font-family: "helvetica";
 }
+
