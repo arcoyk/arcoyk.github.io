@@ -1,3 +1,7 @@
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
 font {
 	line-height: 1.7em;
 	font-family: "serif, helveticaNeue";
