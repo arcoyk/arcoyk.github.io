@@ -1,15 +1,43 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 <link type="text/css" href="base.css" rel="stylesheet">
 <style type="text/css">
   <!--
-  @media print{
-    .main {
-      margin: 50px auto;
-      width: 15cm;
-      font-size: 15px;
-    }
+  .main {
+    margin: 50px auto;
+    width: 15cm;
+    font-size: 12px;
+  }
+  .big-nav {
+    width: 100%;
+    height: 25px;
+  }
+  .small-nav {
+    float: left;
+    width: 50%;
+  }
+  .align-right{
+    text-align:right;
+  }
+  body, body * {
+    font-family: "Open Sans";
+  }
+  .tabbed {
+    margin: -10px 0px 10px 10px;
+  }
+  .big-font {
+    font-size: 20px;
+  }
+  b {
+    font-family: sans-serif;
+  }
+  .padded {
+    padding-top: 4px;
+  }
+  ul {
+    margin: 0px 0px 0px -15px;
   }
   //-->
 </style>
@@ -17,70 +45,91 @@
 <body>
 <div class="main">
 <font>
-<font class="big-font">
-Yui Kita<br>
-</font>
+
+<div class="big-nav">
+  <div class="big-font small-nav">
+    Yui Kita
+  </div>
+  <div class="align-right small-nav padded">
+    yuikita21@gmail.com | http://arcoyk.github.io/
+  </div>
+</div>
 <div class="div-bar"></div>
-yuikita21@gmail.com<br>
-http://lab.rekimoto.org/members-2/yui-kita/ <br>
-Ph.D Candidate @ The University of Tokyo, Applied Computer Science (SV: Prof. Jun Rekimoto)<br>
-<br>
-<b>Summary</b><br>
-Yui is a researcher and designer with a background of Computer Science and Augmented Reality. 
-His research focuses on Human Computer Interaction, 
-Human Augmentation, visualization, and his interests include introducing new methods for 
-learning technical skills with computational support. 
-His technical skills expand from hardware to software development 
-and he shows remarkable communication skills in collaborating/team-working. <br>
-<br>
-<b>Education</b><br>
-<u>The University of Tokyo</u>, Tokyo, Japan (Apr 2014 - present)<br>
-Ph.D. Student, Applied Computer Science (SV: Prof. Jun Rekimoto)<br>
-<br>
-<u>The University of Tokyo</u>, Tokyo, Japan (Apr 2012 - Mar 2014)<br>
-Master of Arts and Sciences, Applied Computer Science (SV: Prof. Jun Rekimoto)<br>
-Key Course: Human Interface, Network Industries, Applied Computer Science, Emerging Design and Informatics<br>
-<br>
-<u>Aoyamagakuin University</u>, Kanagawa, Japan (Apr 2008 - Mar 2012)<br>
-Bacherlor of Engineering, Computer Science (SV: Prof. Minoru Harada)<br>
-Key Course: Algorithm, Programming, Computer Archtecture, Logic Circuits, Natual Language Processing<br>
-<br>
-<b>Working Experience</b><br>
-Sony Computer Science Laboratories, Research Assistant (Sept 2015 - present)<br>
-takram design engineering, designer (Apr 2014 - Mar 2015)<br>
-Exploratory Software Project, IPA MITOH, Chief Developer (Aug 2012 - Feb 2013)<br>
-Igarashi Design User Interface Project, JST ERATO, Research Assistant (Jun 2010 - Mar 2013)<br>
-<br>
-<b>Publications (Peer-reviewed International Conference)</b><br>
-1. Y.Kita and J.Rekimoto. Digitally Enhanced Utensils: Designing Time-sensitive Gustations.16th International Conference on Human-Computer Interaction 2014.<br>
-2. Y.Kita and J.Rekimoto. Thermal Visualization on Cooking. Proceedings of the 23rd International Conference on Artificial Reality and Telexistence (ICAT), Tokyo, Japan, 2013.<br>
-3. Y.Kita and J.Rekimoto. Spot-Light: Multimodal Projection Mapping on Food. 15th International Conference on Human-Computer Interaction 2013.<br>
-<br>
-<b>Awards and Grant</b><br>
-GOOD DESIGN GOLD AWARD (2015)<br>
-Outstanding Graduation Thesis, Aoyama Gakuin University (Mar 2012)<br>
-IPA MITOH (Aug 2012)<br>
-1st, U.S. Intern of Recruit Holdings, Inc. (Sept 2014)<br>
-TRUFFLE CAPITAL AWARD (Aug 2015)<br>
-CCHANNEL AWARD (Aug 2015)<br>
-<br>
-<b>Exhibitions and Invited Talks</b><br>
-National Museum of Emerging Science and Innovation (2011, Igarashi ERATO), CRISTAL (Table Interface for Home Devices)<br>
-The University of Tokyo (2012, iii Exhibition), CAPINNIT (Books that search images)<br>
-The University of Tokyo (2012, iii Exhibition), DEEPLOOK (Dynamic blur with gaze tracking)<br>
-LINE (2013, MITOH Conference), Programmable Food<br>
-Maker Fair Tokyo (2014, Tokyo Big Sight)<br>
-Microsoft (2014, MITOH Conference), Wet Materials<br>
-Recruit Holdings, Inc (2015, TECH LAB PAAK), Chefs' Hippocampus (Creating new recipes with computer)<br>
-Sony, STEF (2015)<br>
-<br>
-<b>Skills</b><br>
-Language: Japanese, English, French<br>
-Software: C/C++, Java, Python, Ruby, OpenCV, OpenGL, GLSL<br>
-Manufacturing: 3D Printing, Laser Cutter, Circuit design and manufacture, motors, electronic sensing technologies, microcontroller programming and interface with hardware, and cameras<br>
-<br>
+
+<p>
+  <b>Education</b><br>
+  <div class="tabbed">
+    <b>The University of Tokyo</b> (Apr 2014 - present) Ph.D. Candidate, Computer Science (SV: Prof. Jun Rekimoto)<br>
+    <b>The University of Tokyo</b> (Apr 2012 - Mar 2014) Master of Arts and Sciences, Computer Science (SV: Prof. Jun Rekimoto)<br>
+    <b>Aoyamagakuin University</b> (Apr 2008 - Mar 2012) Bacherlor of Engineering, Computer Science (SV: Prof. Minoru Harada)<br>
+  </div>
+</p>
+
+<p>
+  <b>Work Experience</b><br>
+  <div class="tabbed">
+    <b>Sony Computer Science Laboratories</b> Research Assistant (Sept 2015 - present)<br>
+    <ul>
+      <li>Built a telepresence system that provides real time 3D spatial information from one room to another (C++, UDP, OpenGL. Half year, 4 members).</li>
+      <li>Developed a survey technique to discover potential tradeoffs on telepresence (Half year, Alone).
+    </ul>
+    <b>takram design engineering</b> Software Engineer / Designer (Apr 2014 - Mar 2015)<br>
+    <ul>
+      <li>UI/UX design for a concept car (HTML5, SASS, Backbone.js. Half year, 2 members).
+      <li>Launched visualization system for Japanese economics (C++, WebView on Cinder. 1 year, 4 members).
+    </ul>
+    <b>Exploratory Software Project, IPA MITOH</b> Chief Developer (Aug 2012 - Feb 2013)<br>
+    <ul>
+      <li>Designed hardware and software to provide on-the-fly seasoning while eating (micropump, microcontroller, Java. 1 year, alone).
+      <li>User study of perceptual effects of the devise
+    </ul>
+    <b>Igarashi Design User Interface Project, JST ERATO</b> Research Assistant (Jun 2010 - Mar 2013)<br>
+    <ul>
+      <li>Built a table top remote controller for digital appliances such as TVs, DVD and lights (C#, 1 year, 2 members).
+    </ul>
+  </div>
+</p>
+
+<p>
+  <b>Publications (Peer-reviewed International Conference)</b><br>
+  <div class="tabbed">
+    1. Y.Kita and J.Rekimoto. Digitally Enhanced Utensils: Designing Time-sensitive Gustations.16th International Conference on Human-Computer Interaction 2014.<br>
+    2. Y.Kita and J.Rekimoto. Thermal Visualization on Cooking. Proceedings of the 23rd International Conference on Artificial Reality and Telexistence (ICAT), Tokyo, Japan, 2013.<br>
+    3. Y.Kita and J.Rekimoto. Spot-Light: Multimodal Projection Mapping on Food. 15th International Conference on Human-Computer Interaction 2013.<br>
+  </div>
+</p>
+
+<p>
+  <b>Awards and Grant</b>
+  <div class="tabbed">
+    Good Design Gold Award (2015). -The biggest design competition in Japan (13/3658 products)<br>
+    Outstanding Graduation Thesis, Aoyama Gakuin University (Mar 2012)<br>
+    IPA MITOH (Aug 2012) -Research grant (20/90 products)<br>
+    1st, U.S. Intern of Recruit Holdings, Inc. (Sept 2014).<br>
+    TRUFFLE CAPITAL AWARD &amp; CCHANNEL AWARD (Aug 2015) -Competition for developers and tech startups. Double awarded. (3/50 products).<br>
+  </div>
+</p>
+
+<p>
+  <b>Exhibitions and Invited Talks</b>
+  <div class="tabbed">
+    National Museum of Emerging Science and Innovation (2011), CRISTAL (Table Interface for Home Devices). Over 500 audiences.<br>
+    LINE (2013), Programmable Food. Over 50 software engineers and researchers.<br>
+    Microsoft (2014), Wet Materials. Over 50 software engineers and researchers.<br>
+    Recruit Holdings, Inc (2015), Chefs' Hippocampus (Creating new recipes with computer). Over 50 software engineers and students.<br>
+    Sony, STEF (2015). Internal exhibition, over 200 audiences.<br>
+  </div>
+</p>
+
+<p>
+  <b>Skills</b><br>
+  <div class="tabbed">
+    Language: Japanese, English<br>
+    Software: Java, C/C++, Ruby<br>
+  </div>
+</p>
+
 <div class="div-bar"></div>
-<br>
 <div class='text-right'>2016 YuiKita</div></font>
 
 <script>
@@ -108,3 +157,4 @@ Manufacturing: 3D Printing, Laser Cutter, Circuit design and manufacture, motors
   ga('send', 'pageview');
 
 </script>
+
