@@ -1,59 +1,39 @@
 body {
   -webkit-font-smoothing: antialiased;
 }
-
-font {
-	line-height: 1.7em;
-	font-family: "serif, helveticaNeue";
-	font-size: 0.83em;
-}
-
-.div-bar {
-	width: 100%;
-	margin: 10px 0px;
-	border-top: 1px solid #ccc;
-}
-
-.big-font {
-	font-size: 1.85em;
-}
-
-.medium-font {
-	font-size: 1.4em;
-}
-
 .main {
-	width: 600px;
+	width: 500px;
 	margin: 100 auto;
+  font-family: "Source Sans Pro", sans-serif;
+  color: rgb(145, 148, 153);
+  font-size: 16px;
+  letter-spacing: 0.2px;
+  line-height: 24px;
+  text-align: justify;
+  vertical-align: baseline;
+  display: block;
+  box-sizing: border-box;
 }
 
-.gray {
-  color: #aaa;
+a {
+  text-decoration: none;
+  font-style: none;
+  border-bottom: 1px dotted rgb(145, 148, 153);
+  color: rgb(145, 158, 153);
 }
 
-.text-right {
-	text-align: right;
+a:visited {
+  color: rgb(145, 158, 153);
 }
 
-.float {
-	margin-top: 20px;
-	width: 290px;
-	float: left;
+a:hover {
+  color: rgb(145, 158, 153);
 }
 
-.casm {
-	width: 20px;
+img {
+  width: 300px;
 }
 
-.float-box-large {
-	height: 35em;
+b {
+  color: rgb(72, 77, 85);
 }
-
-.float-box-small {
-	height: 18em;
-}
-
-.helvetica {
-	font-family: "helvetica";
-}
-

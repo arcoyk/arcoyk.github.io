@@ -1,0 +1,46 @@
+Chef's Hippocumpas is a project to generate "new and good" collections of ingredient from a database of good collection of ingredient. This project aim to enhance human creativity using computational creativity. As a system, it applies NLP algorithm to food comparison (Word2Vec), measures "creativity" of a collection by a simple equasion.
+
+The input of this system is a dataset which contains good collection of items. The output is a "new and good" collection.
+
+Recipe creation is nothing but what you do when you're hungry at home, but don't want to go out for shopping. Looking into refregirator, you'll find some ingredients. Suppose they varies, but not enough to compose a specific recipe. You come up with several "new" recipe, where creativity arises.
+
+Naturally, we collects ingredients which goes well together. Most of the measure is done by if you've seen the combination. We came up with several patterns of combination. The amount of combination rapidly increase as the number of ingrediates increases.
+
+It is said that human is capable of memorize up to 8 numbers at a time. The number is called "magic number" and depict we have limited working memory. That means we can compare up to 8 ingredients at a time. 
+
+In a word, our collective creation is limited by working memory. In other word, we cloud enhance our creativity using computer memory.
+
+What is Chef's Hippocumpas?
+Word2Vec on Recipe
+
+Thanks to the NLP advances, we have a powerful tool to caliculate one contextized item to another. Word2Vec is an technique to "vectorize" a word in a text. If you input a long text, Word2Vec create a vector (like [0.0, 0.1, 0.4, 0.2, 0.4]) that represent the word. Using it, we can caliculate words. For example, "king" - "man" + "woman" = "Queen". Here we can caliculate the distance between words by caliculating the distance of between vectors (see CosineSimilarity).
+
+As most of recommendation system does, Word2Vec also counts how frequent each word appears together.  
+
+What is Creativity?
+
+Now, we have a collection of ingredients and the distance between each other. But what can we define "creativity"? What for do you feel "creativity"? Or what kind of things are supposed to be "creative"?
+
+I assumed that creativity is something "new and good". This also means "new" thing is not always good. If "new" thing is "good" then every trial will success. So the second step is to measure newness and goodness of ingredient collection.
+
+Suppose you randomly pick five ingredients from your refgirator. The goal is to create new but good combination of ingredients. To understand how they related each other, you caliculate the distances between each other and get an array of distance.
+
+One easy-understanding measure is the average of the distance array. If the average of the distance is high, that means you've got a combiation that appears frequently in existing recipe. In other word, the average can measure how "good" they are.
+
+The second measure is the standard deviation. Notely, this measures how they are distributed. This measure is independent from the average, and we can suppose low and high distribution with a same average. In other word, the standard diviations represents how "new" they are.
+
+If the collection's distances have low average and high standard diviation, the collection containing new collection while maintaining harmoney. In a word, collective creativity can be measured by the ratio of average and standard diviation of the distance array.
+
+Our system randomly picks several ingredients and find a collection whose distance array have low average and high standard diviation.
+
+How Can I Use It?
+
+Thank you for being interested, but the project has been suspended as we decided the project will not meet grant's goal. If you have a bigdata (and grants) send a message. 
+
+Extension
+
+Just by replacing the recipe database to interior databse, we may can create "new and good" combination of inteoriors. 
+
+
+
+
