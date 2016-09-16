@@ -1,137 +1,83 @@
 <html>
 <head>
-	<style type="text/css">
-	<!--
-	div{
-		margin: 100 auto;
-		font-family: "HelveticaNeue-Light";
-	}
-	img {
-		width: 900px;
-	}
-	.main {
-		width: 900px;
-	}
-	.big {
-		font-size: 40px;
-	}
-	.footer {
-		text-align: center;
-	}
-	-->
-	</style>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:600,700" rel="stylesheet">
+<link type="text/css" href="../base.css" rel="stylesheet">
 </head>
 <body>
-	<div class="main">
-			<p class="big">Chef's Hippocampus -Overview and Photos</p>
-			<i>Yui Kita, Rekimoto Lab, The University of Tokyo, yuikita21@gmail.com.</i>
-		<hr/>
-		<div>
-			<p class="big">Description</p>
-			<p>Chef's Hippocampus is a project to augment chef's brain. As a part of the big goal of "Augmented Human", this project aim to enrich one's memory with bigdata-supported machine processing so that they can create and compare patterns as many as possible.
-			</p>
-		</div>
-		<div>
+<div class="main">
 
-			<img src="allrecipes.png"/>
-			<br>
-			<p>Fig1. A sample of recipe data (Allrecipes.com).</p>
-			<br>
-			<br>
+<p>
+<b>Chef's Hippocampus</b>
+</p>
 
-			<img src="ings.png"/>
-			<br>
-			<p>Fig2. Ingrediets processed from recipe data (fragment).</p>
-			<br>
-			<br>
+<p>
+<a href="orange.png"><img src="orange.png"></a>
+</p>
 
-			<img src="network.png"/>
-			<br>
-			<p>Fig3. Visualized ingredient network.</p>
-			<br>
-			<br>
+<p>Chef's Hippocampus is a project to generate "good and new" collections of ingredient from existing recipe. Our system values creavity by average and standard deviation of distance between ingredients.
+</p>
 
-			<img src="matrix.png"/>
-			<br>
-			<p>Fig4. Ingredient network in matrix (fragment).</p>
-			<br>
-			<br>
+<p>Human brain is good at recognize creativity or find patterns behind a complex relationship. However, its working memory is limited (it is said that we're capable of keeping only 8 numbers in our working memory). This fact suggests there might be millions of good combination that we just don't come up with.
+</p>
 
-			<img src="map.png"/>
-			<br>
-			<p>Fig5. Map of generated ingredient set according to average of ingredients' distances and standard deviation of ingredients' distances.</p>
-			<br>
-			<br>
+<p>
+This project aims to enhance human creativity with computational creativity. The input of the system is exisiting collections of ingredient. The output is a "good and new" collection of ingredient. This article describes how to create such collections and a NLP tech that backs the idea.
+</p>
 
-			<img src="img3.png"/>
-			<br>
-			<p>Fig6. Computationally Generated Recipe. (1)Parsely, Oats, Butter. (2)Pepper Jack Cheese, Salt, White Chocolate. (3)Rice, Potato, Sugar. Each number is mapped on Fig5.</p>
-			<br>
-			<br>
+<p><b>What is Creativity</b></p>
 
-			<img src="orange.png"/>
-			<br>
-			<p>Fig7. Orange, Shrimp, Cream Cheese, Cashew.</p>
-			<br>
-			<br>
+<p>"Creativity" is a common word, but not commonly defined. We have a big discussion. However, many artisits and researchers agree that something is "creative" when it is "good and new". The system generates "good and new" collection of food based on this hiptethis. To measure how "good and new", it calculate average (for how good) and standard deviation (for how new) of distance between collected ingredients.
+</p>
 
-			<img src="raspberry.JPG"/>
-			<br>
-			<p>Fig8. Raspberry, Salted Popcorn, Bourbon Whisky, Chinese Five-spice powder, Thyme.</p>
-			<br>
-			<br>
+<p>First, the system requires good database that hold good collection of items. We used recipe database. Recipe database is a good collection of ingedients because bad recipes should have been omitted in the long history of cuisine.
+</p>
 
-			<img src="fungi.JPG"/>
-			<br>
-			<p>Fig9. Porcino, Dark Chocolate, Cashew, Blood Orange, Shallot.</p>
-			<br>
-			<br>
+<p>Secondly, the system counts how many recipes each two ingredients shares. If two ingredients share a lot of recipe, they are close. In other word, this count is helpful to know how distant these two ingredients are.
+</p>
 
-			<img src="chocolate.JPG"/>
-			<br>
-			<p>Fig10. White Chocolate, Rose Marry, Carrote.</p>
-			<br>
-			<br>
+<p>If you simply want a good collection of ingredient, the average of distance is useful. If it's low, they're close each other. If it's high, they are distant.</p>
 
-		</div>
-		<hr/>
-		<div>
-			<p class="big">Appendix</p>
-			<img src="poster.png"/>
-			<br>
-			<p>Fig a-1. Poster for Rekimoto Lab 2015.</p>
-			<br>
-			<br>
+<p>However, we want more interesting combination. If we collects close distant ingredients, they might have harmony, but not interesting. If we add far distant ingredient, then the harmony will be disrupted.
+</p>
 
-			<img src="img1.png"/>
-			<br>
-			<p>Fig a-2. Strangers in a bowl.</p>
-			<br>
-			<br>
+<p>So, the system also thinks about standard deviation. Standard deviation is a measure to know how distributed the distances are. If it's high, the collection has low distant ingredients and high distant ingredients at the same time.
+</p>
 
-			<img src="img2.png"/>
-			<br>
-			<p>Fig a-3. Best recipe in 4 tested recipes. (1)Parsely, Oats, Butter.</p>
-			<br>
-			<br>
+<p>Lastly, it suggests collections with low average and high standard deviation in their distance. Low average and high standard deviation mean, the collection contains interesting pairs in it while keeping harmony.
+</p>
 
-			<img src="weight.png"/>
-			<br>
-			<p>Fig a-4. Ingredient - ingredient weight, showing how relative they are (fragment).</p>
-			<br>
-			<br>
+<p>
+<b>How to Compute Food</b>
+</p>
 
-			<img src="result.png"/>
-			<br>
-			<p>Fig a-5. 10000 recipes generated by computer in 2 sec (fragment)</p>
-			<br>
-			<br>
+<p>
+Thanks to the Natural Language Processing advances, we have a powerful tool to caliculate the distance between one ingredient to another. <a href="https://en.wikipedia.org/wiki/Word2vec">Word2Vec</a> is a technique to "vectorize" a word in a text. If you input a long text, Word2Vec generates a vector (e.g. [0.0, 0.1, 0.4, 0.2, 0.4]) that represents the word. Using it, we can calculate words. For example, "king" - "man" + "woman" = "Queen". Here we can calculate the distance between words using the distance of between vectors (see <a href="https://en.wikipedia.org/wiki/Cosine_similarity">Cosine similarity</a>).
+</p>
+
+<p>
+We applied Word2Vec to recipe data. Here, text is recipe, and word is ingredient. We took cosine similarity as the distance of ingredients.
+</p>
+
+<p>
+<b>Extension</b>
+</p>
+
+<p>
+The idea of Chef's Hippocampus is applicable to various collections such as colors, clothes and items, interiors, where human enumeration capability falls short of the possible combination.
+</p>
+
+<b>How Can I Use It?</b>
+</p>
+
+<p>
+Thank you for being interested, but the project has been suspended as we decided the project will not meet grant's goal. If you have a bigdata <a href="/">send me a message.</a></p>
 
 
-		</div>
-		<hr/>
-		<div class="footer">
-			<i>Yui Kita, The University of Tokyo, yuikita21@gmail.com.</i>
-		</div>
-	</div>
+<p>
+<a href="../index.html">Back</a>
+</p>
+</div>
 </body>
+</html>
+
