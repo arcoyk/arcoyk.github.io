@@ -37,19 +37,24 @@ p {
 a {
   text-decoration: none;
   font-style: none;
-  color: rgb(145, 158, 153);
+  color: deepskyblue;
 }
 
 a:visited {
-  color: rgb(145, 158, 153);
+  color: deepskyblue;
 }
 
 a:hover {
-  color: rgb(145, 158, 153);
+  color: skyblue;
+}
+
+.profile {
+  width: 50%;
+  margin: 10px 0px;
 }
 
 img {
-  width: 50%;
+  width: 100%;
   margin: 10px 0px;
 }
 
