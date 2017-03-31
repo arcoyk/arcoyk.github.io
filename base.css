@@ -21,7 +21,7 @@ p {
 }
 
 .k {
-  color: deepskyblue;
+  color: dodgerblue;
 }
 
 .b {
@@ -37,15 +37,15 @@ p {
 a {
   text-decoration: none;
   font-style: none;
-  color: deepskyblue;
+  color: dodgerblue;
 }
 
 a:visited {
-  color: deepskyblue;
+  color: dodgerblue;
 }
 
 a:hover {
-  color: skyblue;
+  color: dodgerblue;
 }
 
 .profile {
