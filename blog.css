@@ -1,9 +1,18 @@
-.main {
-  text-align:left;
+.date {
+  text-align: left;
+  font-weight: bold;
+  color:black;
+  margin: 0px 0px;
+}
+
+.float-box-small {
+	height: 18em;
+}
+
+.article {
+  margin: 70px 0px;
 }
 
 p {
-  text-align: justify;
   margin: 0px 0px;
-  margin-bottom: 100px;
 }
